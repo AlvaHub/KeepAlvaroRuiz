@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import * as Common from './../components/Common';
+import {MyText} from './../components/MyText';
+
 import {
 
   Platform,
@@ -71,10 +73,11 @@ export default class HomeScreen extends Component {
                     <Image source={{ uri: item.img }} style={{ height: 80, width: 80 }}></Image>
                   </View>
                   <View style={{ flex: 2 }}>
-                    <Text>{item.name}</Text>
+                    <MyText>{item.name}</MyText>
+                    
                 
                     <View style={{ marginTop: 5 }} >
-                      <Text style={{ fontWeight: 'bold', marginTop: 3 }}>R$ {Common.formatNumber(item.price)}</Text>
+                      <MyText style={{ fontWeight: 'bold', marginTop: 3 }}>R$ {Common.formatNumber(item.price)}</MyText>
                     </View>
                   </View>
                 </View>
